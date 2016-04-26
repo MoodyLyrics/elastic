@@ -1,0 +1,833 @@
+[2016-04-14 14:04:17,405][INFO ][node                     ] [Hybrid] version[2.3.1], pid[37793], build[bd98092/2016-04-04T12:25:05Z]
+[2016-04-14 14:04:17,407][INFO ][node                     ] [Hybrid] initializing ...
+[2016-04-14 14:04:17,938][INFO ][plugins                  ] [Hybrid] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-04-14 14:04:17,963][INFO ][env                      ] [Hybrid] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [391.4gb], net total_space [464.8gb], spins? [unknown], types [hfs]
+[2016-04-14 14:04:17,963][INFO ][env                      ] [Hybrid] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-04-14 14:04:17,964][WARN ][env                      ] [Hybrid] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-04-14 14:04:19,571][INFO ][node                     ] [Hybrid] initialized
+[2016-04-14 14:04:19,571][INFO ][node                     ] [Hybrid] starting ...
+[2016-04-14 14:04:19,647][INFO ][transport                ] [Hybrid] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2016-04-14 14:04:19,651][INFO ][discovery                ] [Hybrid] elasticsearch/MRCWu8sFSCmkJ77LeEN82Q
+[2016-04-14 14:04:22,690][INFO ][cluster.service          ] [Hybrid] new_master {Hybrid}{MRCWu8sFSCmkJ77LeEN82Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-04-14 14:04:22,702][INFO ][http                     ] [Hybrid] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2016-04-14 14:04:22,703][INFO ][node                     ] [Hybrid] started
+[2016-04-14 14:04:22,747][INFO ][gateway                  ] [Hybrid] recovered [2] indices into cluster_state
+[2016-04-14 14:04:23,039][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.kibana][0]] ...]).
+[2016-04-14 14:46:09,126][INFO ][cluster.metadata         ] [Hybrid] [megacorp] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [employee]
+[2016-04-14 14:46:09,179][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[megacorp][4]] ...]).
+[2016-04-14 14:46:09,189][INFO ][cluster.metadata         ] [Hybrid] [megacorp] update_mapping [employee]
+[2016-04-14 15:03:51,237][INFO ][cluster.metadata         ] [Hybrid] [.kibana] creating index, cause [api], templates [], shards [1]/[1], mappings [config]
+[2016-04-14 15:03:51,250][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.kibana][0]] ...]).
+[2016-04-14 15:06:15,228][INFO ][cluster.metadata         ] [Hybrid] [blogs] creating index, cause [api], templates [], shards [3]/[1], mappings []
+[2016-04-14 15:06:15,253][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[blogs][0], [blogs][0]] ...]).
+[2016-04-14 15:06:16,867][INFO ][cluster.metadata         ] [Hybrid] [.kibana] creating index, cause [api], templates [], shards [1]/[1], mappings [config]
+[2016-04-14 15:06:16,883][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.kibana][0]] ...]).
+[2016-04-14 15:20:57,387][INFO ][cluster.metadata         ] [Hybrid] [website] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [blog]
+[2016-04-14 15:20:57,428][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[website][4]] ...]).
+[2016-04-14 15:20:57,435][INFO ][cluster.metadata         ] [Hybrid] [website] update_mapping [blog]
+[2016-04-14 15:52:01,607][INFO ][cluster.metadata         ] [Hybrid] [my_index] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [my_answer]
+[2016-04-14 15:52:01,644][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[my_index][4]] ...]).
+[2016-04-14 15:52:01,649][DEBUG][action.index             ] [Hybrid] failed to execute [index {[my_index][my_answer][1], source[{  "url" : "http://www.reddit.com/r/IAmA/comments/2nxwkb/",  "title" : "CERN Engineer AmA",  "body" : "A few days ago, CERN launched an Open Data Portal to publicly share  data from the Large Hadron Collider. We are some of the scientists behind this  project, working to make science more open globally. Ask Us (Almost)  Anything about open data, open access, data preservation, big data and open science!",  "categories": [ "programming", "research" ]  }
+]}] on [[my_index][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@6de162fb; line: 4, column: 81]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@6de162fb; line: 4, column: 81]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.index.mapper.DocumentParser.createBuilderFromDynamicValue(DocumentParser.java:515)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDynamicValue(DocumentParser.java:617)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:442)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 15:52:27,398][DEBUG][action.index             ] [Hybrid] failed to execute [index {[my_index][my_answer][1], source[{  "url" : "http://www.reddit.com/r/IAmA/comments/2nxwkb/",  "title" : "CERN Engineer AmA",  "body" : "A few days ago, CERN launched an Open Data Portal to publicly share  data from the Large Hadron Collider. We are some of the scientists behind this  project, working to make science more open globally. Ask Us (Almost)  Anything about open data, open access, data preservation, big data and open science!",  "categories": [ "programming", "research" ]  }
+]}] on [[my_index][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@5c21cb0d; line: 4, column: 81]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@5c21cb0d; line: 4, column: 81]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.index.mapper.DocumentParser.createBuilderFromDynamicValue(DocumentParser.java:515)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDynamicValue(DocumentParser.java:617)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:442)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 15:53:03,904][DEBUG][action.index             ] [Hybrid] failed to execute [index {[my_index][my_answer][1], source[{  "url" : "http://www.reddit.com/r/IAmA/comments/2nxwkb/",  "title" : "CERN Engineer AmA",  "body" : "A few days ago, CERN launched an Open Data Portal to publicly share  data from the Large Hadron Collider. We are some of the scientists behind this  project, working to make science more open globally. Ask Us (Almost)  Anything about open data, open access, data preservation, big data and open science!",  "categories": [ "programming", "research" ]  }
+]}] on [[my_index][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@6505d52c; line: 4, column: 81]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@6505d52c; line: 4, column: 81]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.index.mapper.DocumentParser.createBuilderFromDynamicValue(DocumentParser.java:515)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDynamicValue(DocumentParser.java:617)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:442)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 15:53:43,692][INFO ][cluster.metadata         ] [Hybrid] [megacorp] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [employee]
+[2016-04-14 15:53:43,737][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[megacorp][4]] ...]).
+[2016-04-14 15:53:43,744][INFO ][cluster.metadata         ] [Hybrid] [megacorp] update_mapping [employee]
+[2016-04-14 15:54:28,761][INFO ][cluster.metadata         ] [Hybrid] [music] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [lyric]
+[2016-04-14 15:54:28,800][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[music][4]] ...]).
+[2016-04-14 15:54:28,806][INFO ][cluster.metadata         ] [Hybrid] [music] update_mapping [lyric]
+[2016-04-14 15:58:49,191][INFO ][cluster.metadata         ] [Hybrid] [music] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [lyric]
+[2016-04-14 15:58:49,225][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[music][4]] ...]).
+[2016-04-14 15:58:49,228][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html"
+    "artist" : "Bob Dylan"
+    "song_name" : "Summer Days"
+    "album_name" : "Love And Theft"
+    "lyric" : "Summer days and summer nights are gone
+I know a place where there\'s still somethin\' going on
+
+I've got a house on the hill, I got hogs out in the mud
+I've got a house on the hill, I got hogs all out in the mud
+I've got a long haired woman, she got royal Indian blood
+
+Everybody get ready, lift up your glasses and sing
+Everybody get ready, lift up your glasses and sing
+Well I\'m standin\' on the table, I\'m proposin\' a toast to the king
+
+I'm driving in the flats in a Cadillac car
+The girls all say "You're a worn out star"
+My pockets are loaded, and I'm spending every dime
+How can you say you love someone else,
+you know it's me all the time
+
+Well the fog\'s so thick you can\'t spy the land
+Well the fog\'s so thick that you can\'t even spy the land
+what good are you anyway if you can't stand up to some old businessman
+
+Weddin\' bells are ringin\' and the choir is beginning to sing
+Yes, the weddin\' bells are ringin\' and the choir\'s beginning to sing
+What looks good in the day, at night is another thing
+
+She\'s looking in to my eyes, and she\'s a-holding my hand
+She looks in to my eyes, she's holding my hand
+she say, \'you can\'t repeat the past,\'
+I say "You can\'t What do you mean you can\'t
+Of course you can."
+}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@604ee33b; line: 3, column: 6]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@604ee33b; line: 3, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:727)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:264)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:01:24,235][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html"
+    "artist" : "Bob Dylan"
+    "song_name" : "Summer Days"
+    "album_name" : "Love And Theft"
+    "lyric" : "Summer days and summer nights are gone
+I know a place where there\"s still somethin\" going on
+
+I've got a house on the hill, I got hogs out in the mud
+I've got a house on the hill, I got hogs all out in the mud
+I've got a long haired woman, she got royal Indian blood
+
+Everybody get ready, lift up your glasses and sing
+Everybody get ready, lift up your glasses and sing
+Well I\"m standin\" on the table, I\"m proposin\" a toast to the king
+
+I'm driving in the flats in a Cadillac car
+The girls all say "You're a worn out star"
+My pockets are loaded, and I'm spending every dime
+How can you say you love someone else,
+you know it's me all the time
+
+Well the fog\"s so thick you can\"t spy the land
+Well the fog\"s so thick that you can\"t even spy the land
+what good are you anyway if you can't stand up to some old businessman
+
+Weddin\" bells are ringin\" and the choir is beginning to sing
+Yes, the weddin\" bells are ringin\" and the choir\"s beginning to sing
+What looks good in the day, at night is another thing
+
+She\"s looking in to my eyes, and she\"s a-holding my hand
+She looks in to my eyes, she's holding my hand
+she say, \"you can\"t repeat the past,\"
+I say "You can\"t What do you mean you can\"t
+Of course you can."
+}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@6b2ac01c; line: 3, column: 6]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@6b2ac01c; line: 3, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:727)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:264)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:02:50,744][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html"
+    "artist" : "Bob Dylan"
+    "song_name" : "Summer Days"
+    "album_name" : "Love And Theft"
+    "lyric" : "Summer days and summer nights are gone I know a place where there\"s still somethin\" going on I\"ve got a house on the hill, I got hogs out in the mud I\"ve got a house on the hill, I got hogs all out in the mud
+I've got a long haired woman, she got royal Indian blood Everybody get ready, lift up your glasses and sing Everybody get ready, lift up your glasses and sing Well I\"m standin\" on the table, I\"m proposin\" a toast to the king."}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@6407dbc5; line: 3, column: 6]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@6407dbc5; line: 3, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:727)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:264)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:04:10,626][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html"
+    "artist" : "Bob Dylan"
+    "song_name" : "Summer Days"
+    "album_name" : "Love And Theft"
+    "lyric" : "Summer days and summer nights are gone I know a place where there\"s still somethin\" going on I\"ve got a house on the hill, I got hogs out in the mud I\"ve got a house on the hill, I got hogs all out in the mud
+I've got a long haired woman, she got royal Indian blood Everybody get ready, lift up your glasses and sing Everybody get ready, lift up your glasses and"}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@1ce26e81; line: 3, column: 6]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@1ce26e81; line: 3, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:727)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:264)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:04:11,562][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html"
+    "artist" : "Bob Dylan"
+    "song_name" : "Summer Days"
+    "album_name" : "Love And Theft"
+    "lyric" : "Summer days and summer nights are gone I know a place where there\"s still somethin\" going on I\"ve got a house on the hill, I got hogs out in the mud I\"ve got a house on the hill, I got hogs all out in the mud
+I've got a long haired woman, she got royal Indian blood Everybody get ready, lift up your glasses and sing Everybody get ready, lift up your glasses and"}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@28f08382; line: 3, column: 6]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@28f08382; line: 3, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:727)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:264)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:04:12,360][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html"
+    "artist" : "Bob Dylan"
+    "song_name" : "Summer Days"
+    "album_name" : "Love And Theft"
+    "lyric" : "Summer days and summer nights are gone I know a place where there\"s still somethin\" going on I\"ve got a house on the hill, I got hogs out in the mud I\"ve got a house on the hill, I got hogs all out in the mud
+I've got a long haired woman, she got royal Indian blood Everybody get ready, lift up your glasses and sing Everybody get ready, lift up your glasses and"}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@52a73e27; line: 3, column: 6]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@52a73e27; line: 3, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:727)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:264)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:04:13,294][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html"
+    "artist" : "Bob Dylan"
+    "song_name" : "Summer Days"
+    "album_name" : "Love And Theft"
+    "lyric" : "Summer days and summer nights are gone I know a place where there\"s still somethin\" going on I\"ve got a house on the hill, I got hogs out in the mud I\"ve got a house on the hill, I got hogs all out in the mud
+I've got a long haired woman, she got royal Indian blood Everybody get ready, lift up your glasses and sing Everybody get ready, lift up your glasses and"}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@715df798; line: 3, column: 6]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@715df798; line: 3, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:727)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:264)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:04:31,734][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html"
+    "artist" : "Bob Dylan"
+    "song_name" : "Summer Days"
+    "album_name" : "Love And Theft"
+    "lyric" : "Summer days and summer nights are gone I know a place where there\"s still somethin\" going on I\"ve got a house on the hill, I got hogs out in the mud I\"ve got a house on the hill, I got hogs all out in the mud
+I've got a long haired woman, she got royal Indian blood Everybody get ready, lift up your glasses and sing Everybody get ready, lift up your glasses and"}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@4504864a; line: 3, column: 6]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate OBJECT entries
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@4504864a; line: 3, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:727)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:264)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:05:02,883][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html",
+    "artist" : "Bob Dylan",
+    "song_name" : "Summer Days",
+    "album_name" : "Love And Theft",
+    "lyric" : "Summer days and summer nights are gone I know a place where there\"s still somethin\" going on I\"ve got a house on the hill, I got hogs out in the mud I\"ve got a house on the hill, I got hogs all out in the mud
+I've got a long haired woman, she got royal Indian blood Everybody get ready, lift up your glasses and sing Everybody get ready, lift up your glasses and"
+}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@4f50f87a; line: 6, column: 229]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@4f50f87a; line: 6, column: 229]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.index.mapper.DocumentParser.createBuilderFromDynamicValue(DocumentParser.java:515)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDynamicValue(DocumentParser.java:617)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:442)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:05:47,162][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html",
+    "artist" : "Bob Dylan",
+    "song_name" : "Summer Days",
+    "album_name" : "Love And Theft",
+    "lyric" : "Summer days and summer nights are gone I know a place where there\"s still somethin\" going on I\"ve got a house on the hill, I got hogs out in the mud I\"ve got a house on the hill, I got hogs all out in the mud I\'ve got a long haired woman, she got royal Indian blood Everybody get ready, lift up your glasses and sing Everybody get ready, lift up your glasses and"
+}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unrecognized character escape ''' (code 39)
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@1fccba7a; line: 6, column: 232]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized character escape ''' (code 39)
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@1fccba7a; line: 6, column: 232]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._handleUnrecognizedCharacterEscape(ParserMinimalBase.java:510)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._decodeEscaped(UTF8StreamJsonParser.java:3171)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2456)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.index.mapper.DocumentParser.createBuilderFromDynamicValue(DocumentParser.java:515)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDynamicValue(DocumentParser.java:617)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:442)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:06:16,318][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html",
+    "artist" : "Bob Dylan",
+    "song_name" : "Summer Days",
+    "album_name" : "Love And Theft",
+    "lyric" : "Summer days and summer nights are gone I know a place where there\'s still somethin\' going on I\'ve got a house on the hill, I got hogs out in the mud I\'ve got a house on the hill, I got hogs all out in the mud I\'ve got a long haired woman, she got royal Indian blood Everybody get ready, lift up your glasses and sing Everybody get ready, lift up your glasses and"
+}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unrecognized character escape ''' (code 39)
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@322061db; line: 6, column: 83]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized character escape ''' (code 39)
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@322061db; line: 6, column: 83]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._handleUnrecognizedCharacterEscape(ParserMinimalBase.java:510)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._decodeEscaped(UTF8StreamJsonParser.java:3171)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2456)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.index.mapper.DocumentParser.createBuilderFromDynamicValue(DocumentParser.java:515)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDynamicValue(DocumentParser.java:617)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:442)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:07:03,464][INFO ][cluster.metadata         ] [Hybrid] [music] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [lyric]
+[2016-04-14 16:07:03,495][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[music][4]] ...]).
+[2016-04-14 16:07:03,498][DEBUG][action.index             ] [Hybrid] failed to execute [index {[music][lyric][1], source[{
+    "url" : "http://mldb.org/song-10012-summer-days.html",
+    "artist" : "Bob Dylan",
+    "song_name" : "Summer Days",
+    "album_name" : "Love And Theft",
+    "lyric" : "Summer days and summer nights are gone I know a place where there\'s still somethin\' going on I\'ve got a house on the hill, I got hogs out in the mud I\'ve got a house on the hill, I got hogs all out in the mud I\'ve got a long haired woman, she got royal Indian blood Everybody get ready, lift up your glasses and sing Everybody get ready, lift up your glasses and"
+}
+]}] on [[music][3]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Unrecognized character escape ''' (code 39)
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@40883b44; line: 6, column: 83]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized character escape ''' (code 39)
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@40883b44; line: 6, column: 83]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._handleUnrecognizedCharacterEscape(ParserMinimalBase.java:510)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._decodeEscaped(UTF8StreamJsonParser.java:3171)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2456)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.index.mapper.DocumentParser.createBuilderFromDynamicValue(DocumentParser.java:515)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDynamicValue(DocumentParser.java:617)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:442)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-14 16:07:11,027][INFO ][cluster.metadata         ] [Hybrid] [music] update_mapping [lyric]
+[2016-04-14 16:07:29,404][INFO ][cluster.metadata         ] [Hybrid] [music] update_mapping [lyric]
+[2016-04-14 16:07:34,963][INFO ][cluster.metadata         ] [Hybrid] [music] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [lyric]
+[2016-04-14 16:07:34,993][INFO ][cluster.routing.allocation] [Hybrid] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[music][4]] ...]).
+[2016-04-14 16:07:34,997][INFO ][cluster.metadata         ] [Hybrid] [music] update_mapping [lyric]
+[2016-04-14 16:25:00,271][WARN ][rest.suppressed          ] /_bulk Params: {}
+com.fasterxml.jackson.core.JsonParseException: Unexpected end-of-input: expected close marker for OBJECT (from [Source: [B@1358e03a; line: 1, column: 0])
+ at [Source: [B@1358e03a; line: 1, column: 3]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportInvalidEOF(ParserMinimalBase.java:470)
+	at com.fasterxml.jackson.core.base.ParserBase._handleEOF(ParserBase.java:501)
+	at com.fasterxml.jackson.core.base.ParserBase._eofAsNextChar(ParserBase.java:509)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipWSOrEnd(UTF8StreamJsonParser.java:2854)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:692)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.action.bulk.BulkRequest.add(BulkRequest.java:292)
+	at org.elasticsearch.rest.action.bulk.RestBulkAction.handleRequest(RestBulkAction.java:88)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:205)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:449)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:61)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-14 16:25:32,693][WARN ][rest.suppressed          ] /_bulk Params: {}
+com.fasterxml.jackson.core.JsonParseException: Unexpected end-of-input: expected close marker for OBJECT (from [Source: [B@1a5e9e6f; line: 1, column: 0])
+ at [Source: [B@1a5e9e6f; line: 1, column: 3]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportInvalidEOF(ParserMinimalBase.java:470)
+	at com.fasterxml.jackson.core.base.ParserBase._handleEOF(ParserBase.java:501)
+	at com.fasterxml.jackson.core.base.ParserBase._eofAsNextChar(ParserBase.java:509)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipWSOrEnd(UTF8StreamJsonParser.java:2854)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:692)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.action.bulk.BulkRequest.add(BulkRequest.java:292)
+	at org.elasticsearch.rest.action.bulk.RestBulkAction.handleRequest(RestBulkAction.java:88)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:205)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:449)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:61)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-14 16:29:53,068][INFO ][node                     ] [Hybrid] stopping ...
+[2016-04-14 16:29:53,092][INFO ][node                     ] [Hybrid] stopped
+[2016-04-14 16:29:53,092][INFO ][node                     ] [Hybrid] closing ...
+[2016-04-14 16:29:53,097][INFO ][node                     ] [Hybrid] closed
+[2016-04-14 16:30:32,056][INFO ][node                     ] [Ch'od] version[2.3.1], pid[38185], build[bd98092/2016-04-04T12:25:05Z]
+[2016-04-14 16:30:32,056][INFO ][node                     ] [Ch'od] initializing ...
+[2016-04-14 16:30:32,444][INFO ][plugins                  ] [Ch'od] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-04-14 16:30:32,459][INFO ][env                      ] [Ch'od] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [391.3gb], net total_space [464.8gb], spins? [unknown], types [hfs]
+[2016-04-14 16:30:32,461][INFO ][env                      ] [Ch'od] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-04-14 16:30:32,462][WARN ][env                      ] [Ch'od] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-04-14 16:30:33,537][INFO ][node                     ] [Ch'od] initialized
+[2016-04-14 16:30:33,537][INFO ][node                     ] [Ch'od] starting ...
+[2016-04-14 16:30:33,591][INFO ][transport                ] [Ch'od] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2016-04-14 16:30:33,594][INFO ][discovery                ] [Ch'od] elasticsearch/6J7RS6yWRAGjMoQAPKu_og
+[2016-04-14 16:30:36,628][INFO ][cluster.service          ] [Ch'od] new_master {Ch'od}{6J7RS6yWRAGjMoQAPKu_og}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-04-14 16:30:36,641][INFO ][http                     ] [Ch'od] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2016-04-14 16:30:36,641][INFO ][node                     ] [Ch'od] started
+[2016-04-14 16:30:36,691][INFO ][gateway                  ] [Ch'od] recovered [4] indices into cluster_state
+[2016-04-14 16:30:37,018][INFO ][cluster.routing.allocation] [Ch'od] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[blogs][1]] ...]).
+[2016-04-14 16:47:27,830][INFO ][cluster.metadata         ] [Ch'od] [megacorp] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [employee]
+[2016-04-14 16:47:27,876][INFO ][cluster.routing.allocation] [Ch'od] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[megacorp][4]] ...]).
+[2016-04-14 16:47:27,881][INFO ][cluster.metadata         ] [Ch'od] [megacorp] update_mapping [employee]
+[2016-04-14 22:37:50,991][INFO ][node                     ] [Ch'od] stopping ...
+[2016-04-14 22:37:51,017][INFO ][node                     ] [Ch'od] stopped
+[2016-04-14 22:37:51,018][INFO ][node                     ] [Ch'od] closing ...
+[2016-04-14 22:37:51,021][INFO ][node                     ] [Ch'od] closed

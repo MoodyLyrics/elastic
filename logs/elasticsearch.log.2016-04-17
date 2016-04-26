@@ -1,0 +1,22 @@
+[2016-04-17 20:52:16,941][INFO ][node                     ] [Grand Director] version[2.3.1], pid[41480], build[bd98092/2016-04-04T12:25:05Z]
+[2016-04-17 20:52:16,943][INFO ][node                     ] [Grand Director] initializing ...
+[2016-04-17 20:52:17,463][INFO ][plugins                  ] [Grand Director] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-04-17 20:52:17,487][INFO ][env                      ] [Grand Director] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [390.1gb], net total_space [464.8gb], spins? [unknown], types [hfs]
+[2016-04-17 20:52:17,488][INFO ][env                      ] [Grand Director] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-04-17 20:52:17,488][WARN ][env                      ] [Grand Director] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-04-17 20:52:19,121][INFO ][node                     ] [Grand Director] initialized
+[2016-04-17 20:52:19,121][INFO ][node                     ] [Grand Director] starting ...
+[2016-04-17 20:52:19,191][INFO ][transport                ] [Grand Director] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2016-04-17 20:52:19,194][INFO ][discovery                ] [Grand Director] elasticsearch/3tp44RLoTYqYqRkM9pweIg
+[2016-04-17 20:52:22,234][INFO ][cluster.service          ] [Grand Director] new_master {Grand Director}{3tp44RLoTYqYqRkM9pweIg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-04-17 20:52:22,247][INFO ][http                     ] [Grand Director] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2016-04-17 20:52:22,247][INFO ][node                     ] [Grand Director] started
+[2016-04-17 20:52:22,301][INFO ][gateway                  ] [Grand Director] recovered [4] indices into cluster_state
+[2016-04-17 20:52:22,688][INFO ][cluster.routing.allocation] [Grand Director] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[blogs][2]] ...]).
+[2016-04-17 21:24:45,237][INFO ][cluster.metadata         ] [Grand Director] [website] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [blog]
+[2016-04-17 21:24:45,290][INFO ][cluster.routing.allocation] [Grand Director] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[website][4]] ...]).
+[2016-04-17 21:24:45,305][INFO ][cluster.metadata         ] [Grand Director] [website] update_mapping [blog]
+[2016-04-17 21:31:26,877][INFO ][cluster.metadata         ] [Grand Director] [my_index] create_mapping [my_type]
+[2016-04-17 21:51:59,438][INFO ][cluster.metadata         ] [Grand Director] [my_index] creating index, cause [api], templates [], shards [1]/[1], mappings []
+[2016-04-17 21:51:59,452][INFO ][cluster.routing.allocation] [Grand Director] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[my_index][0]] ...]).
+[2016-04-17 21:51:59,459][INFO ][cluster.metadata         ] [Grand Director] [my_index] create_mapping [my_type]

@@ -1,0 +1,117 @@
+[2016-04-11 00:10:51,987][INFO ][cluster.metadata         ] [Martin Preston] [my_index] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [my_answer]
+[2016-04-11 00:10:52,043][INFO ][cluster.routing.allocation] [Martin Preston] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[my_index][4]] ...]).
+[2016-04-11 00:10:52,047][DEBUG][action.index             ] [Martin Preston] failed to execute [index {[my_index][my_answer][3], source[{  "url" : "http://www.reddit.com/r/Frugal/comments/16ooh0/so_some_of_you/",  "title" : "Washing Machines Threads",  "body" : "So some of you were curious about my washing machine in some recent threads...  here’s a cost update of owning versus using a laundrette (in the UK) : Frugal",  "categories": [ "home"]  }
+]}] on [[my_index][4]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@646de6c2; line: 4, column: 92]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@646de6c2; line: 4, column: 92]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.index.mapper.DocumentParser.createBuilderFromDynamicValue(DocumentParser.java:515)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDynamicValue(DocumentParser.java:617)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:442)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-11 00:10:55,823][DEBUG][action.index             ] [Martin Preston] failed to execute [index {[my_index][my_answer][3], source[{  "url" : "http://www.reddit.com/r/Frugal/comments/16ooh0/so_some_of_you/",  "title" : "Washing Machines Threads",  "body" : "So some of you were curious about my washing machine in some recent threads...  here’s a cost update of owning versus using a laundrette (in the UK) : Frugal",  "categories": [ "home"]  }
+]}] on [[my_index][4]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@29a578fb; line: 4, column: 92]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@29a578fb; line: 4, column: 92]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.index.mapper.DocumentParser.createBuilderFromDynamicValue(DocumentParser.java:515)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDynamicValue(DocumentParser.java:617)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:442)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-11 00:10:56,614][DEBUG][action.index             ] [Martin Preston] failed to execute [index {[my_index][my_answer][3], source[{  "url" : "http://www.reddit.com/r/Frugal/comments/16ooh0/so_some_of_you/",  "title" : "Washing Machines Threads",  "body" : "So some of you were curious about my washing machine in some recent threads...  here’s a cost update of owning versus using a laundrette (in the UK) : Frugal",  "categories": [ "home"]  }
+]}] on [[my_index][4]]
+MapperParsingException[failed to parse]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@2852aa58; line: 4, column: 92]];
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:154)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@2852aa58; line: 4, column: 92]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.index.mapper.DocumentParser.createBuilderFromDynamicValue(DocumentParser.java:515)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDynamicValue(DocumentParser.java:617)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:442)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	... 17 more
+[2016-04-11 12:30:11,000][INFO ][node                     ] [Martin Preston] stopping ...
+[2016-04-11 12:30:11,027][INFO ][node                     ] [Martin Preston] stopped
+[2016-04-11 12:30:11,029][INFO ][node                     ] [Martin Preston] closing ...
+[2016-04-11 12:30:11,034][INFO ][node                     ] [Martin Preston] closed
