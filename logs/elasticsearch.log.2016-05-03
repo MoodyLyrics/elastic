@@ -1,0 +1,379 @@
+[2016-05-03 12:12:53,677][INFO ][node                     ] [Locust] stopping ...
+[2016-05-03 12:12:53,720][INFO ][node                     ] [Locust] stopped
+[2016-05-03 12:12:53,720][INFO ][node                     ] [Locust] closing ...
+[2016-05-03 12:12:53,726][INFO ][node                     ] [Locust] closed
+[2016-05-03 21:24:22,686][INFO ][node                     ] [Black Crow] version[2.3.1], pid[4265], build[bd98092/2016-04-04T12:25:05Z]
+[2016-05-03 21:24:22,687][INFO ][node                     ] [Black Crow] initializing ...
+[2016-05-03 21:24:23,062][INFO ][plugins                  ] [Black Crow] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-05-03 21:24:23,077][INFO ][env                      ] [Black Crow] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [400.2gb], net total_space [464.8gb], spins? [unknown], types [hfs]
+[2016-05-03 21:24:23,077][INFO ][env                      ] [Black Crow] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-05-03 21:24:23,078][WARN ][env                      ] [Black Crow] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-05-03 21:24:24,149][INFO ][node                     ] [Black Crow] initialized
+[2016-05-03 21:24:24,149][INFO ][node                     ] [Black Crow] starting ...
+[2016-05-03 21:24:24,200][INFO ][transport                ] [Black Crow] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2016-05-03 21:24:24,203][INFO ][discovery                ] [Black Crow] elasticsearch/uMl4q9QfStuzsxnLfUJvKw
+[2016-05-03 21:24:27,238][INFO ][cluster.service          ] [Black Crow] new_master {Black Crow}{uMl4q9QfStuzsxnLfUJvKw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-05-03 21:24:27,261][INFO ][http                     ] [Black Crow] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2016-05-03 21:24:27,261][INFO ][node                     ] [Black Crow] started
+[2016-05-03 21:24:27,309][INFO ][gateway                  ] [Black Crow] recovered [6] indices into cluster_state
+[2016-05-03 21:24:27,751][INFO ][cluster.routing.allocation] [Black Crow] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[blogs][0], [blogs][0]] ...]).
+[2016-05-03 21:34:47,592][DEBUG][action.index             ] [Black Crow] failed to execute [index {[songs][lyrics][73400], source[{"artist": "Eric Clapton", "song" : "TULSA TIME", "album" : "Timepieces 2", "lyrics" : " by Danny Flowers Well, I left Oklahoma Driving in a Pontiac, Just about to lose my mind. I was going to Arizona, Maybe on to California Where people all live so fine. My mother says I'm crazy, My baby calls me lazy, But I'm gonna show them all this time 'Cause you know I ain't no fool and I don't need no more damn schoolin'. I was born to just walk the line.   Living on Tulsa Time.   Living on Tulsa Time.   Gonna set my watch back to it   'Cause you know that I've been through it.   Living on Tulsa Time. So there I was in Hollywood, Thinking I was doing good, Talking on the telephone line. They don't want me in the movies And nobody sings my songs; My mama says my baby's doing fine. So then I started winking, Then I started thinking That I really had a flash this time. That I had no bussiness leaving, And nobody would be grieving; You see I'm on Tulsa time.   Chorus   Chorus   "}
+]}] on [[songs][0]]
+MapperParsingException[failed to parse [lyrics]]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 5)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@41a97766; line: 1, column: 381]];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 5)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@41a97766; line: 1, column: 381]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.textOrNull(AbstractXContentParser.java:194)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateFieldForString(StringFieldMapper.java:368)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateField(StringFieldMapper.java:311)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2016-05-03 21:46:16,282][DEBUG][action.index             ] [Black Crow] failed to execute [index {[songs][lyrics][77764], source[{"artist": "Frank Zappa", "song" : "-No No No-", "album" : "Cruising With Ruben And The Jets", "lyrics" : " Ray Collins (lead vocals) Frank Zappa (lead guitar) Roy Estrada (bass) Jimmy Carl Black (drums) Arthur Tripp (drums) Ian Underwood (piano, alto saxophone) Don Preston (piano) Motorhead Sherwood (baritone saxophone, tambourine) Bunk Gardner (tenor saxophone) Boppa dooayyydoo  Boppa dooayyydoo  Boppa dooayyydoo  Boppa dooayyydoo  No no no no no no no-o-o-oo-oh  Makes me cry to see you go-o-o-oo-oh  No no no no no no no-o-o-oo-oh  Makes me cry to see you go-o-o-oo-oh  Left me here to cry alone  With a bottle of juice &amp; a pork chop bone  No no no no no no no-o-o-oo-oh  Makes me cry to see you go-o-o-oo-oh  Gave my money all to you-oo  Took my watch and pawned it too-oo  Two gold teeth and one glass eye  Didn't have the nerve to say goodbye  Boppa dooayyydoo  Boppa dooayyydoo  You treat me funky baby  And some day you'll have to pay  I ain't such a fool that I would let you go  And treat me this way  No no no no no no no-o-o-oh  I ain't going to let you go-o-o-oo-oh  No no no no no no no-o-o-oh  I ain't going to let you go-oh-o-oo-oh    "}
+]}] on [[songs][0]]
+MapperParsingException[failed to parse [lyrics]]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 25)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@5cdad66b; line: 1, column: 1150]];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 25)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@5cdad66b; line: 1, column: 1150]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.textOrNull(AbstractXContentParser.java:194)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateFieldForString(StringFieldMapper.java:368)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateField(StringFieldMapper.java:311)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2016-05-03 22:23:00,335][DEBUG][action.index             ] [Black Crow] failed to execute [index {[songs][lyrics][90630], source[{"artist": "Jackson Browne", "song" : "THE LATE SHOW", "album" : "Late For The Sky", "lyrics" : " Everyone I've ever known has wished me well Anyway that's how it seems, it's hard to tell Maybe people only ask you how you're doing 'Cause that's easier than letting on how little they could care But when you know that you've got a real friend somewhere Suddenly all the others are so much easier to bear Now to see things clear it's hard enough I know While you're waiting for reality to show Without dreaming of the perfect love And holding it so far above That if you stumbled onto someone real, you'd never know (You'd never know) You could be with somebody who is lonely too (Sometimes it doesn't show) He might be trying to get across to you (Words can be so slow) When your own emptiness is all that's getting through There comes a point when you're not sure why you're still talking I passed that point long ago (Long ago) Now I'm so tired of all this circling And all these glimpses of the end (You know it's useless to pretend) That's all the voices say: You'll go right on circling Until you've found some kind of friend I saw you through the laughter and the noise You were talking with the soldiers and the boys While they scuffled for your weary smiles I thought of all the empty miles And the years that I've spent looking for your eyes (Looking for your eyes) And now I'm sitting here wondering what to say (That you might recognize) Afraid that all these words might scare you away (And break through the disguise) No one ever talks about their feelings anyway Without dressing them in dreams and laughter I guess it's just too painful otherwise Look-- It's like you're standing in the window Of a house nobody lives in And I'm sitting in a car across the way (Let's just say) It's an early model Chevrolet (Let's just say) It's a warm and windy day You go and pack your sorrow The trash man comes tomorrow Leave it at the curb and we'll just roll away   "}
+]}] on [[songs][1]]
+MapperParsingException[failed to parse [lyrics]]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 5)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@404296c6; line: 1, column: 1133]];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 5)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@404296c6; line: 1, column: 1133]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.textOrNull(AbstractXContentParser.java:194)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateFieldForString(StringFieldMapper.java:368)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateField(StringFieldMapper.java:311)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2016-05-03 22:57:20,785][DEBUG][action.index             ] [Black Crow] failed to execute [index {[songs][lyrics][94622], source[{"artist": "Jon Secada", "song" : "Get Me Over You", "album" : "Secada", "lyrics" : " Music and Lyrics by Jon Secada, Miguel Morejon and Diane Warren Sketches and edges of pictures so perfect Haunt my memory And girl I still weep Cause I keep you within I'm so sorry I let you go. Lovers forever a phrase I remember Now seems so unkind The world that I knew Is the world that is now Somewhere lost in time, somewhere lost in time. If I could find a way Make you wanna stay Share my life with you I don't know how Guess I'll make it somehow, baby Maybe I'll get through But what  is it gonna take? To get me over you. Tears mixed with fears Contradictions arise Ramble through my mind That all the things that I've been looking for I will never find, I will never find. If I could find a way Make you wanna stay Share my life with you I don't know how Guess I'll make it somehow, baby Maybe I'll get through But what  is it gonna take? To get me over you. Chorus Ah, ah, ah, ah, ah, ah, yeah, yeah What is it gonna take, what is it gonna take? Ah, ah, ah, ah, ah, ah, yeah, yeah What is it gonna take? To get me over you. Repeat  ChorusIT'S ENOUGH Music and Lyrics by Jon Secada and Miguel Morejon Out of sight then out of mind It's not as easy as I expected Is the reality I find And it's sad to hear it And it's sad to talk about it Cause, baby, I still need you Feel the need to hold you Baby, I still care. It's enough to know That I'm always gonna love you All my life And to let you go It's enough to say goodbye. What I wanted, what I want Are simply not the same things But it's too late to turn back time Still I want to tell you That I'll always be right here for you No matter where you go No matter what you do. It's enough to know That I'm always gonna love you All my life And to let you go It's enough to say goodbye.   "}
+]}] on [[songs][1]]
+MapperParsingException[failed to parse [lyrics]]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 12)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@110cafe7; line: 1, column: 1137]];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 12)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@110cafe7; line: 1, column: 1137]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.textOrNull(AbstractXContentParser.java:194)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateFieldForString(StringFieldMapper.java:368)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateField(StringFieldMapper.java:311)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2016-05-03 23:11:52,953][DEBUG][action.index             ] [Black Crow] failed to execute [index {[songs][lyrics][107750], source[{"artist": "Lux Occulta", "song" : "Miloct (Ogrod Afrodyty)", "album" : "The Forgotten Arts", "lyrics" : " Na imie mia?a Woda jego zwano Ogniem Wci+? wie?e s+ ich lady w Lesie Rozkoszy To pierwsi kochankowie Niebo-Ona i On-Piek?o dwa tak ro?ne ?ywio?y przy?apane w rownowadze Tak, tak, dotknij lekko mojej skory niech krew zawrze w twym sercu, w ?y?ach zatancz ze mn+, zatancz na mnie tak, spojrzyj jak wygl+dam od wewn+trz Najpote?niejsza Krolowo w koronie plecionej z ro? naznacz mnie b?ogos?awienstwem wietego owocu mi?oci Najpote?niejsza Krolowo, sk?ada ci niski pok?on niewolnik twojej nagoci mi?o? jest prawem silnych Miedzy Rozkosz+ i Bolem istnieje cienka granica jedno karmi twe cia?o, drugie wypala dusze Mi?o? nie jest zabawk+, mi?o? jest dla silnych... Wojownikow - jeli dostrzegasz moj Nagi Miecz Krolow - czy? wszyscy nie mamy Tronu ze Snow? Anio?ow - czy nie widzisz cienia moich rozpostartych skrzyde??   "}
+]}] on [[songs][0]]
+MapperParsingException[failed to parse [lyrics]]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 20)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@61cdf6ae; line: 1, column: 152]];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 20)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@61cdf6ae; line: 1, column: 152]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.textOrNull(AbstractXContentParser.java:194)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateFieldForString(StringFieldMapper.java:368)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateField(StringFieldMapper.java:311)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2016-05-03 23:17:54,615][DEBUG][action.index             ] [Black Crow] failed to execute [index {[songs][lyrics][107766], source[{"artist": "Lux Occulta", "song" : "Tworzenie", "album" : "The Forgotten Arts", "lyrics" : " Po?kn+?em oko opatrznoci Palec Bo?y stan+? mi w gardle S?oncem zapalam papierosa To ja Wszechwiat rozpostar?em Ja Tworca Ja Amen Ja Wybuchem Ja Panem Skrzyd?ami kruka krzycze Bia?ego, bom nieskalany (Jam) Kart+ Atutow+ i Szczurem i Rydwanem Nurkuje w ?zy twoje w nadziei ?e wrosne na sta?e w te rane Zapuszcze korzenie w twoim zw+tpieniu Ja Wozkiem Niemowlaka i Ja Karawanem   "}
+]}] on [[songs][0]]
+MapperParsingException[failed to parse [lyrics]]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 20)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@495f068d; line: 1, column: 117]];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 20)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@495f068d; line: 1, column: 117]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.textOrNull(AbstractXContentParser.java:194)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateFieldForString(StringFieldMapper.java:368)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateField(StringFieldMapper.java:311)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2016-05-03 23:22:35,540][DEBUG][action.index             ] [Black Crow] failed to execute [index {[songs][lyrics][107766], source[{"artist": "Lux Occulta", "song" : "Tworzenie", "album" : "The Forgotten Arts", "lyrics" : " Po?kn+?em oko opatrznoci Palec Bo?y stan+? mi w gardle S?oncem zapalam papierosa To ja Wszechwiat rozpostar?em Ja Tworca Ja Amen Ja Wybuchem Ja Panem Skrzyd?ami kruka krzycze Bia?ego, bom nieskalany (Jam) Kart+ Atutow+ i Szczurem i Rydwanem Nurkuje w ?zy twoje w nadziei ?e wrosne na sta?e w te rane Zapuszcze korzenie w twoim zw+tpieniu Ja Wozkiem Niemowlaka i Ja Karawanem   "}
+]}] on [[songs][0]]
+MapperParsingException[failed to parse [lyrics]]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 20)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@45a1160e; line: 1, column: 117]];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 20)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@45a1160e; line: 1, column: 117]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.textOrNull(AbstractXContentParser.java:194)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateFieldForString(StringFieldMapper.java:368)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateField(StringFieldMapper.java:311)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2016-05-03 23:43:33,621][DEBUG][action.index             ] [Black Crow] failed to execute [index {[songs][lyrics][114328], source[{"artist": "Michael Penn", "song" : "Strange Season", "album" : "Free-for-All", "lyrics" : " This story is past tense  and I did not want my cover blown Thought well enough was left alone and who decided you'd rescue me? Yeah, I do agree a bent and broken set are we Up in a tree we're stuck and the only lights off the wire are all the moths in the fire Can't you feel how the air is getting dry Try, but can't identify what you start to think   My baby won't come out at night They took apart the Angel's Flight  For this  Strange Season Did you feel it change from cold to hot With fever, you will have a bout And all you do is talk about the meaning of the walkabout... There I go again A taste of my own medicine So shake your head and look around The leaves don't fall There's still no sound to this Strange Season Then I start to think I've seen it through I saw the sights They disassembled Angel's Flight. with this Strange Season  Do you want to know that it comes down to this? Do you want to hear that Ignorance is bliss Ignorance is bliss   "}
+]}] on [[songs][3]]
+MapperParsingException[failed to parse [lyrics]]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 3)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@5cb0cd5b; line: 1, column: 762]];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 3)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@5cb0cd5b; line: 1, column: 762]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.textOrNull(AbstractXContentParser.java:194)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateFieldForString(StringFieldMapper.java:368)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateField(StringFieldMapper.java:311)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2016-05-03 23:52:22,593][DEBUG][action.index             ] [Black Crow] failed to execute [index {[songs][lyrics][118123], source[{"artist": "Morrissey", "song" : "THE LAST OF THE FAMOUS INTERNATIONAL PLAYBOYS", "album" : "World Of Morrissey", "lyrics" : " Dear hero imprisoned  With all the new crimes that you are perfecting  Oh, I can't help quoting you  Because everything that you said rings true  And now in my cell  (Well, I followed you)  And here's a list of who I slew  Reggie Kray - do you know my name ?  Oh, don't say you don't  Please say you do, (oh) I am : The last of the famous  International playboys  The last of the famous  International playboys  And in my cell  (Well, I loved you)  And every man with a job to do  Ronnie Kray - do you know my face ?  Oh, don't say you don't  Please say you do, (oh) I am :  The last of the famous  International playboys  The last of the famous  International playboys  In our lifetime those who kill  The newsworld hands them stardom  And these are the ways  On which I was raised  These are the ways  On which I was raised  I never wanted to kill  I AM NOT NATURALLY EVIL  Such things I do  Just to make myself  More attractive to you  HAVE I FAILED ?  Oh...  Oh, the last of the famous  International playboys  The last of the famous    "}
+]}] on [[songs][2]]
+MapperParsingException[failed to parse [lyrics]]; nested: JsonParseException[Illegal unquoted character ((CTRL-CHAR, code 19)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@e4ffc04; line: 1, column: 1091]];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 19)): has to be escaped using backslash to be included in string value
+ at [Source: org.elasticsearch.common.io.stream.InputStreamStreamInput@e4ffc04; line: 1, column: 1091]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwUnquotedSpace(ParserMinimalBase.java:497)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2482)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2411)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:285)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.text(JsonXContentParser.java:84)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.textOrNull(AbstractXContentParser.java:194)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateFieldForString(StringFieldMapper.java:368)
+	at org.elasticsearch.index.mapper.core.StringFieldMapper.parseCreateField(StringFieldMapper.java:311)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
